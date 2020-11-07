@@ -8,8 +8,14 @@ import java.util.ArrayList;
  *
  * @author Leocassio
  */
-public interface IHello extends Remote{
-    public String Adicionar(Produto produto)throws RemoteException;
+public interface IHello extends Remote {
+
+    public String Adicionar(Produto produto) throws RemoteException;
+
     public String Remover(int posicao) throws RemoteException;
-    public ArrayList<Produto> Mostrar()throws RemoteException;
+
+    public ArrayList<Produto> Mostrar() throws RemoteException;
+
+    public String Pesquisar(String nome) throws RemoteException;
+
 }

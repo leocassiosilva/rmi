@@ -23,7 +23,7 @@ public class Cliente {
             for (Produto p : produtos) {
                 System.out.println(p.getNome());
             }
-
+            System.out.println(obj.Pesquisar("Leocassio"));
         } catch (Exception ex) {
             Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
         }
