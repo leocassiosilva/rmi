@@ -24,6 +24,7 @@ public class Cliente {
                 System.out.println(p.getNome());
             }
             System.out.println(obj.Pesquisar("Leocassio"));
+            System.out.println(obj.Remover("Leocassio"));
         } catch (Exception ex) {
             Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -23,8 +23,14 @@ public class Hello extends UnicastRemoteObject implements IHello {
     }
 
     @Override
-    public String Remover(int posicao) throws RemoteException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String Remover(String nome) throws RemoteException {
+       for (int i = 0; i < produtos.size(); i++) {
+            if (produtos.get(i).getNome().equals(nome)) { 
+                this.produtos.remove(i);
+                return "Deu certo!";
+            }
+        }   
+       return "Deu erro!";
     }
 
     @Override
