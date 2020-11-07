@@ -8,24 +8,28 @@ import java.util.ArrayList;
  *
  * @author Leocassio
  */
-public class Hello extends UnicastRemoteObject implements IHello{
-    
-    ArrayList<String> loja = new ArrayList();
+public class Hello extends UnicastRemoteObject implements IHello {
 
-    
-    public Hello() throws RemoteException{
+    ArrayList<Produto> produtos = new ArrayList();
+
+    public Hello() throws RemoteException {
         super();
     }
 
     @Override
-    public String Adicionar(String nome, long preco) throws RemoteException {
-        loja.add(nome + ";" + preco);
+    public String Adicionar(Produto produto) throws RemoteException {
+        produtos.add(produto);
         return "inserido!";
     }
 
     @Override
     public String Remover(int posicao) throws RemoteException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ArrayList<Produto> Mostrar() throws RemoteException { 
+        return produtos;
     }
 
 }
